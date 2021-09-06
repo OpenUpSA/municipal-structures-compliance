@@ -6,6 +6,7 @@ ENV PIP_DISABLE_PIP_VERSION_CHECK on
 ENV PYTHONUNBUFFERED 1
 ENV NODE_ENV production
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE DontWarn
+ENV DJANGO_SECRET_KEY not-secret-in-dev
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 
