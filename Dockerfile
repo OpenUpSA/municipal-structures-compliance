@@ -49,5 +49,7 @@ RUN set -ex; \
 
 RUN mkdir staticfiles
 
+RUN python manage.py collectstatic --noinput
+
 EXPOSE 5000
 CMD /app/bin/start.sh
