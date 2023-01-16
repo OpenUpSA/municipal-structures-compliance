@@ -1,6 +1,9 @@
 #FROM openup/docker-python-nodejs:python3.7-nodejs12
 FROM nikolaik/python-nodejs:python3.8-nodejs12
 
+ENV http_proxy=http:...
+ENV https_proxy=http:...
+
 ENV POETRY_VIRTUALENVS_CREATE false
 ENV PIP_NO_CACHE_DIR off
 ENV PIP_DISABLE_PIP_VERSION_CHECK on
