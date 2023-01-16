@@ -1,8 +1,10 @@
 #FROM openup/docker-python-nodejs:python3.7-nodejs12
 FROM nikolaik/python-nodejs:python3.8-nodejs12
 
-ENV http_proxy=http:...
-ENV https_proxy=http:...
+RUN printf 'deb https://deb.debian.org/debian buster main\ndeb https://security.debian.org/debian-security buster/updates main\ndeb https://deb.debian.org/debian buster-updates main' > /etc/apt/sources.list
+
+RUN cat /etc/apt/sources.list
+
 
 ENV POETRY_VIRTUALENVS_CREATE false
 ENV PIP_NO_CACHE_DIR off
